@@ -1,0 +1,245 @@
+body {
+    text-align: center;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    background-image: url('../images/background.jpg'); /* Relative or absolute path to the image */
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+
+
+}
+
+#board {
+    height: 820px;
+    width: 875px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: rgb(255, 255, 255);
+    border: 10px solid lightgrey; */
+    margin-bottom: 1rem;
+
+    perspective: 1000px;
+
+
+}
+
+.card {
+    height: 195px;
+    width: 166px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid lightgrey;
+    transition: transform .5s;
+    cursor: pointer;
+
+    
+}
+
+
+.card:active {
+    
+    /* transition: transform .25; */
+}
+
+.card:hover{
+    transform: scale(1.2);
+
+}
+
+
+.site-footer-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    padding-top: 0rem;
+} 
+
+body h1 {
+    
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+body h2 {
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 2.0rem;
+    margin-top: -3rem;
+    margin-bottom: 0rem;
+}
+
+
+
+
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+.overlay-text p {
+    background-color: #04AA6D;
+    border: 10px solid lightgrey;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+
+.overlay-text p:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+
+.overlay-text.visible {
+display: flex;
+flex-direction: column;
+animation: overlay-grow 2000ms forwards;
+cursor: pointer;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+        
+    }
+    to {
+        font-size: 10rem;
+        background-color: rgba(0, 0, 0, .8);
+        
+    }
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+#toggleMusicButton {
+    margin: 1rem;
+    position:absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#video-canucks {
+    height: auto;
+    width: auto;
+    border: 10px solid lightgrey;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease;  /* Add a smooth transition effect */
+}
+
+#video-canucks:hover {
+    transform: scale(1.1); /* Scale up on hover or when opening */
+}
+
+#playAgainBtn {
+    display: none;
+    /* display: block;  */ /*for testing purposes*/ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    z-index: 101;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px; 
+    z-index: 101;
+    cursor: pointer;
+    border: 10px solid lightgrey;
+    font-size: 5.6rem;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+#playAgainBtn:hover {
+    transform: translate(-50%, 150%) scale(1.1); /* Scale up on hover */
+}
+
+#end-game {
+    display: none;
+    /* display: block;  */ /*for testing purposes*/ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    
+    
+}
+
+#end-game h2 {
+    /* display: none; */
+    display: block;
+    color: white;
+    background-color: #04AA6D;
+    margin-bottom: 5rem;
+    font-size: 5.6rem;
+    width: 80%;
+
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -350%);
+    z-index: 120;
+    border: 10px solid lightgrey;
+    animation: fadeIn 1s forwards; /* Add the fade-in animation */
+
+}
+
+/* fading out animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.luongo-play-again {
+    width: 80%; 
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    border: 10px solid lightgrey;
+    animation: fadeIn 1s forwards; /* Add the fade-in animation */
+}
+
+
+
+
+#restart-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add a smooth transition effect */
+}
+
+
+

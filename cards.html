@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canucks Trading Card Matching Game</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/jpg" href="images/back.jpg">
+    <link rel="icon" href="images/back.jpg">
+    <link rel="icon" href="images/back.jpg" type="image/jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+	<link rel="stylesheet" href="styles/cards.css">
+    <script defer src="scripts/cards.js"></script>
+
+
+</head>
+<body>
+
+    <h1>Match The Canucks</h1>
+
+    <div id="start-game" class = 'overlay-text visible'>
+    <p>Click To Go To Playoffs!</p>
+    <video id ='video-canucks' src="./video/vancouver-canucks-fin-the-whale.mp4" autoplay loop playsinline muted></video>
+    </div>
+
+
+    <h2>Penalties: <span id ='errors'>0</span></h2>
+    
+
+      <!-- button to restart game -->
+    <button id ='restart-button' onclick="restartGame()">Restart Game</button>
+   
+    <!-- sounds effect for cards-->
+    <audio id="cardClickSound" src='./audio/sound-effect.mp3'></audio>
+    
+
+    <!-- background music -->
+    <audio id="backgroundMusic" loop autoplay >
+        <source src="./audio/background-music.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- toggle music on and off  -->
+    <button id="toggleMusicButton"  onclick="toggleBackgroundMusic()">Music on/off</button>
+
+    <!-- cards -->
+    <div id="board"></div>
+
+
+
+    <!-- restart button game when game is finished -->
+    <button id="playAgainBtn" onclick="restartGame()">Click Here To Play Again</button>
+    <div id = 'end-game'>
+        <h2>Canucks Are Going To The Playoffs!</h2>
+    <img class ='luongo-play-again' src="images/play-again.png" alt="luongo play again picture">
+    
+    </div>
+    
+        <footer id="site-footer-2" class="site-footer-2">
+        <p>&copy; Brandon Pham 2023 | Front-End Web Developer | For Educational Purposes Only</p>
+        </footer>
+
+        
+
+</body>
+
+</html>
